@@ -11,18 +11,18 @@ en:
         title: Title  #g
 
   header:
-    list: list of books
+    list: List of books
     edit: Editing book
     new: New book
 
   button:
-    new: new
-    back: back
-    show: show
-    edit: edit
-    destroy: destroy
-    books: books
+    new: New
+    back: Back
+    show: Show
+    edit: Edit
+    destroy: Destroy
+    books: Books
   message:
-    created: 'successfully_created'
-    updated: 'successfully_updated'
-    destroyed: 'successfully_destroyed'
+    created: 'Registration successful.'
+    updated: 'Update successful.'
+    destroyed: 'Deletion successful.'
