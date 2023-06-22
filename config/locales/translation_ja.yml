@@ -9,7 +9,7 @@ ja:
         memo: メモ
         picture: 画像
         title: タイトル
-    views:
+  views:
     pagination:
       first: "最初"
       last: "最後"
