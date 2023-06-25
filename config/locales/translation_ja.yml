@@ -1,0 +1,28 @@
+ja:
+  activerecord:
+    models:
+      book: 本  #g
+
+    attributes:
+      book:
+        author: 著者  #g
+        memo: メモ  #g
+        picture: 写真  #g
+        title: タイトル  #g
+
+  header:
+    list: 本の一覧
+    edit: 本の編集
+    new: 新しく本を登録
+
+  button:
+    new: 新規作成
+    show: 詳細を確認する
+    back: 一覧に戻る
+    edit: 編集する
+    destroy: 削除する
+
+  message:
+    created: 保存に成功しました。
+    updated: 編集の保存に成功しました。
+    destroyed: 削除しました。
