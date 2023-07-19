@@ -1,0 +1,34 @@
+<h2>ユーザー詳細</h2>
+<div>
+  <p>
+    <h3>ユーザー名</h3>
+    <%= @user.name %>
+  </p>
+
+  <p>
+    <h3>ユーザーメールアドレス</h3>
+    <%= @user.email %>
+  </p>
+
+  <p>
+    <h3>自己紹介</h3>
+    <%= @user.introduction %>
+  </p>
+
+  <p>
+    <h3>郵便番号</h3>
+    <%= @user.postal_code %>
+  </p>
+
+  <p>
+    <h3>住所</h3>
+    <%= @user.address %>
+  </p>
+
+</div>
+
+<% if @user.id == current_user.id %>
+<%= link_to t('edit_profile'), edit_user_registration_path %> |
+<% end %>
+
+<%= link_to t('back_to_books'), books_path %>

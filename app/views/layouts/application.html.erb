@@ -11,6 +11,17 @@
   </head>
 
   <body class="<%= params[:action] %>">
+    <p>
+      <% if user_signed_in? %>
+        <%= t('logged_in_as') %> <strong><%= current_user.name %></strong>
+        <%= link_to t('user_page'), user_path(current_user.id) %> |
+        <%= link_to t('user_list'), users_path %> |
+        <%= link_to t('logout'), destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to t('sign_up'), new_user_registration_path %> |
+        <%= link_to t('log_in'), new_user_session_path %>
+      <% end %>
+    </p>
     <%= yield %>
   </body>
 </html>
