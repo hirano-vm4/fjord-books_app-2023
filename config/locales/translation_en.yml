@@ -23,6 +23,7 @@ en:
   user_list: User list
   logout: Logout
   edit_profile: Edit profile
+  edit_user: Edit user
   back_to_books: Back to books
   current Password: (We need your current password to confirm your changes)
   do_not_change_password: (leave blank if you don't want to change it)

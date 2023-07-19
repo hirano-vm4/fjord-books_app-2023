@@ -23,6 +23,7 @@ ja:
   user_list: ユーザーリスト
   logout: ログアウト
   edit_profile: プロフィールを編集
+  edit_user: ユーザー情報の編集
   back_to_books: 本一覧に戻る
   current_password: (変更を確認するには現在のパスワードが必要です)
   do_not_change_password: (変更しない場合は空白のままにしてください)
