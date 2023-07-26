@@ -3,5 +3,6 @@ class AddFieldsToUsers < ActiveRecord::Migration[7.0]
     add_column :users, :postal_code, :string
     add_column :users, :address, :string
     add_column :users, :introduction, :text
+    add_column :users, :name, :string
   end
 end
