@@ -9,3 +9,25 @@ ja:
         memo: メモ
         picture: 画像
         title: タイトル
+  log_in: ログイン
+  sign_up: 新規登録
+  password: パスワードを忘れましたか？
+  reset_password: パスワード再設定メールを送信
+  characters_minimum: 文字以上で設定してください
+  postal_code: 郵便番号
+  address: 住所
+  name: 名前
+  introduction: 自己紹介
+  logged_in_as: ログインユーザー：
+  user_page: ユーザーページ
+  user_list: ユーザーリスト
+  logout: ログアウト
+  edit_profile: プロフィールを編集
+  edit_user: ユーザー情報の編集
+  back_to_books: 本一覧に戻る
+  current_password: (変更を確認するには現在のパスワードが必要です)
+  do_not_change_password: (変更しない場合は空白のままにしてください)
+  update: 更新
+  delete_user: ユーザー削除
+  delete_confirmation: 本当に削除しますか？
+  back_to_user_details: ユーザー詳細に戻る

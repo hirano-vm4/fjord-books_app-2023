@@ -9,3 +9,25 @@ en:
         memo: Memo
         picture: Picture
         title: Title
+  log_in: Log in
+  sign_up: Sign_up
+  password: Forgot your password?
+  reset_password: Send me reset password instructions
+  characters_minimum: characters minimum
+  postal_code: Postal code
+  address: Address
+  name: Name
+  introduction: introduction
+  logged_in_as: logged in as
+  user_page: User page
+  user_list: User list
+  logout: Logout
+  edit_profile: Edit profile
+  edit_user: Edit user
+  back_to_books: Back to books
+  current Password: (We need your current password to confirm your changes)
+  do_not_change_password: (leave blank if you don't want to change it)
+  update: Update
+  delete_user: Cancel my account
+  delete_confirmation: Are you sure?
+  back_to_user_details: Back

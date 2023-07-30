@@ -79,5 +79,11 @@ group :test do
   gem 'webdrivers'
 end
 
+group :development do
+  gem 'letter_opener_web', '~> 2.0'
+end
+
 gem 'carrierwave'
+gem 'devise'
+gem 'devise-i18n'
 gem 'kaminari'
