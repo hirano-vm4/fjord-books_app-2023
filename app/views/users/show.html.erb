@@ -4,6 +4,23 @@
   <%= render @user %>
 </div>
 
+<h2><%= t('views.common.title_index', name: Report.model_name.human) %></h2>
+<% if @user.reports.any? %>
+  <div class="index-items">
+    <% @user.reports.each do |report| %>
+    <div class="index-item">
+      <%= render report %>
+      <p>
+        <%= link_to t('views.common.show', name: Report.model_name.human), report %>
+      </p>
+      </div>
+    <% end %>
+  </div>
+  </ul>
+<% else %>
+  <p><%= t('activerecord.attributes.report.no_report')%> </p>
+<% end %>
+
 <nav class="page-nav">
   <% if current_user == @user %>
     <%= link_to t('views.common.edit', name: User.model_name.human.downcase), edit_user_registration_path %> |

@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= t('views.common.title_index', name: Report.model_name.human) %></h1>
+
+<div class="index-items">
+  <% @reports.each do |report| %>
+  <div class="index-item">
+    <%= render report %>
+    <p>
+      <%= link_to t('views.common.show', name: Report.model_name.human), report %>
+    </p>
+    </div>
+  <% end %>
+</div>
+
+<nav class="page-nav">
+<%= link_to t('views.common.title_new', name: Report.model_name.human), new_report_path %>
+</nav>

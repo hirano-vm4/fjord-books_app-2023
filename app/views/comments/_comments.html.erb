@@ -1,0 +1,23 @@
+<h2>コメント一覧</h2>
+
+<% if comments.any? %>
+  <% comments.each do |comment| %>
+  <div class="show-item">
+    <p><%= comment.content %></p>
+    <p>
+      投稿者:
+      <% if comment.user.name.present? %>
+        <%= link_to comment.user.name, user_path(comment.user) %>
+      <% else %>
+        <%= link_to comment.user.email, user_path(comment.user) %>
+      <% end %>
+    </p>
+    <p><%= comment.created_at.strftime('[%Y年%m月%d日 %H時%M分に投稿]') %></p>
+          <% if current_user == comment.user %>
+            <%= button_to t('views.common.destroy', name: Comment.model_name.human), polymorphic_path([commentable, comment]), method: :delete, data: { confirm: t('views.common.delete_confirm') } %>
+          <% end %>
+  </div>
+  <% end %>
+<% else %>
+  <p><%= t('activerecord.attributes.comment.no_comment') %></p>
+<% end %>
