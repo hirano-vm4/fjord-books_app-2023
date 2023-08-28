@@ -1,11 +1,7 @@
 <div id="<%= dom_id report %>">
   <p>
     <strong><%= User.human_attribute_name(:name) %>:</strong>
-    <% if report.user.name.present? %>
-      <%= link_to report.user.name, user_path(report.user) %>
-    <% else %>
-      <%= link_to report.user.email, user_path(report.user) %>
-    <% end %>
+    <%= link_to report.user.display_name_priority, user_path(report.user) %>
   </p>
 
   <p>
@@ -19,7 +15,6 @@
   </p>
 
   <p>
-  <%= l report.created_at, format: :post_time %>
+    <%= l report.created_at, format: :post_time %>
   </p>
-
 </div>

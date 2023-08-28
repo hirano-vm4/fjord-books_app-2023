@@ -8,7 +8,7 @@
 <% if @user.reports.any? %>
   <div class="index-items">
     <% @user.reports.each do |report| %>
-    <div class="index-item">
+      <div class="index-item">
       <%= render report %>
       <p>
         <%= link_to t('views.common.show', name: Report.model_name.human), report %>
@@ -18,7 +18,7 @@
   </div>
   </ul>
 <% else %>
-  <p><%= t('activerecord.attributes.report.no_report')%> </p>
+  <p><%= t('activerecord.attributes.report.no_report') %> </p>
 <% end %>
 
 <nav class="page-nav">

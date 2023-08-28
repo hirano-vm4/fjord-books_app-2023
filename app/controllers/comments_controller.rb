@@ -2,6 +2,7 @@
 
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:destroy]
+  before_action :authenticate_user!, only: [:destroy]
 
   def create
     @comment = @commentable.comments.build(comment_params)
