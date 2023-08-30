@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:destroy]
-  before_action :authenticate_user!, only: [:destroy]
+  before_action :correct_user, only: [:destroy]
 
   def create
     @comment = @commentable.comments.build(comment_params)
@@ -25,7 +24,7 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:content)
   end
 
-  def set_comment
-    @comment = Comment.find(params[:id])
+  def correct_user
+    @comment = current_user.comments.find_by(id: params[:id])
   end
 end

@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 class ReportsController < ApplicationController
-  before_action :set_report, only: %i[show edit update]
-  before_action :correct_user, only: %i[destroy]
-  before_action :authenticate_user!, only: %i[destroy edit]
+  before_action :set_report, only: %i[show]
+  before_action :correct_user, only: %i[destroy edit update]
 
   # GET /reports or /reports.json
   def index
@@ -11,9 +10,7 @@ class ReportsController < ApplicationController
   end
 
   # GET /reports/1 or /reports/1.json
-  def show
-    @comment = Comment.new
-  end
+  def show; end
 
   # GET /reports/new
   def new
@@ -67,6 +64,5 @@ class ReportsController < ApplicationController
 
   def correct_user
     @report = current_user.reports.find_by(id: params[:id])
-    redirect_to root_url, status: :see_other if @report.nil?
   end
 end
