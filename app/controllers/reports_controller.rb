@@ -59,6 +59,6 @@ class ReportsController < ApplicationController
   end
 
   def correct_user
-    @report = current_user.reports.find_by(params[:id])
+    @report = current_user.reports.find(params[:id])
   end
 end
