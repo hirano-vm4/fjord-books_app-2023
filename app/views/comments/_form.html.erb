@@ -1,0 +1,10 @@
+<%= form_with model: [commentable, Comment.new] do |f| %>
+  <div>
+    <%= f.label :content, t('activerecord.attributes.report.content') %>
+    <%= f.text_area :content, required: true %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

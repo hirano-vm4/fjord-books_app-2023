@@ -1,0 +1,19 @@
+<h2><%= t('views.common.title_index', name: Comment.model_name.human) %></h2>
+
+<% if comments.any? %>
+  <% comments.each do |comment| %>
+    <div class="show-item">
+      <p><%= comment.content %></p>
+      <p>
+        <%= t('activerecord.attributes.comment.commenter') %>:
+        <%= link_to comment.user.display_name_priority, user_path(comment.user) %>
+      </p>
+      <p><%= l comment.created_at, format: :post_time %></p>
+      <% if current_user == comment.user %>
+        <%= button_to t('views.common.destroy', name: Comment.model_name.human), polymorphic_path([commentable, comment]), method: :delete, data: { confirm: t('views.common.delete_confirm') } %>
+      <% end %>
+    </div>
+  <% end %>
+<% else %>
+  <p><%= t('activerecord.attributes.comment.no_comment') %></p>
+<% end %>

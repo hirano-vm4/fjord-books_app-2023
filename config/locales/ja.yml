@@ -180,6 +180,7 @@ ja:
       default: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
+      post_time: "[%Y年%m月%d日 %H時%M分に投稿]"
     pm: 午後
   views:
     common:
@@ -196,6 +197,9 @@ ja:
       validation_error: "%{errors}があるため、この%{name}は保存できませんでした"
       title_show: "%{name}の詳細"
       sign_out: ログアウト
+      title: タイトル
+      content: 本文
+      comment_create_failed: "%{name}の保存に失敗しました"
     pagination:
       first: '« 最初'
       last: '最後 »'
@@ -211,6 +215,7 @@ ja:
     application:
       menu: メニュー
       sign_in_as: "%{user} としてログイン中"
+      daily_report: 日報を書く
   # devise-i18n-viewsをオーバーライド
   devise:
     registrations:

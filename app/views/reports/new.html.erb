@@ -1,0 +1,9 @@
+<h1><%= t('views.common.title_new', name: t('activerecord.models.report')) %></h1>
+
+<%= render "form", report: @report %>
+
+<br>
+
+<nav class="page-nav">
+  <%= link_to t('views.common.back', name: t('activerecord.models.report')), reports_path %>
+</nav>
