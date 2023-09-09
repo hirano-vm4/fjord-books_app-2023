@@ -4,7 +4,7 @@
     <ul>
       <% comments.each do |comment| %>
         <li>
-          <%= comment.content %>
+          <%= sanitize(create_links(comment.content), tags: %w(a), attributes: %w(href)) %>
           <small>
             (<%= link_to comment.user.name_or_email, comment.user %> - <%= l comment.created_at, format: :short %>)
             <% if comment.user == current_user %>

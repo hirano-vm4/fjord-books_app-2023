@@ -1,3 +1,9 @@
+<% if flash.now[:alert].present? %>
+  <div>
+    <%= flash.now[:alert] %>
+  </div>
+<% end %>
+
 <h1><%= t('views.common.title_edit', name: Book.model_name.human.downcase) %></h1>
 
 <%= render "form", book: @book %>

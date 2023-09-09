@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'uri'
+
 module ApplicationHelper
   # localeに応じて複数形の表記を変える
   # - 日本語の場合 => 本
@@ -17,5 +19,12 @@ module ApplicationHelper
 
   def format_content(content)
     safe_join(content.split("\n"), tag.br)
+  end
+
+  def create_links(content)
+    uris = URI.extract(content, %w[http https])
+    modified_text = content
+    uris.each { |uri| modified_text.sub!(uri, "<a href=\"#{uri}\">#{uri}</a>") }
+    modified_text
   end
 end

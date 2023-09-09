@@ -23,3 +23,6 @@ ja:
         content: 内容
         user: 作成者
         created_on: 作成日
+      mention:
+        mentioned: この日報は以下の日報から言及されています
+        no_mention: まだ言及はありません
