@@ -28,7 +28,7 @@ class ReportsController < ApplicationController
   end
 
   def update
-    if @report.update_report_and_mentions(report_params)
+    if @report.save_report_and_mentions(report_params)
       redirect_to @report, notice: t('controllers.common.notice_update', name: Report.model_name.human)
     else
       flash.now[:alert] = t('controllers.common.notice_update_failed', name: Report.model_name.human)
