@@ -8,11 +8,11 @@
 
 <div class="comments-container">
   <strong><%= t('activerecord.attributes.mention.mentioned') %>:</strong>
-  <% if Report.find(params[:id]).mentioned_reports.empty? %>
+  <% if @report.mentioned_reports.empty? %>
     (<%= t('activerecord.attributes.mention.no_mention') %>)
   <% else %>
     <ul>
-      <% Report.find(params[:id]).mentioned_reports.each do | mentioned_report | %>
+      <% @report.mentioned_reports.each do | mentioned_report | %>
       <li>
         <strong><%= link_to mentioned_report.title, mentioned_report %></strong>
           (<%= mentioned_report.created_at.strftime("%Y年%m月%d日にリンクされました") %>)

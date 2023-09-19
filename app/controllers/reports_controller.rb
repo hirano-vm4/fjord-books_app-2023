@@ -31,7 +31,6 @@ class ReportsController < ApplicationController
     if @report.save_report_and_mentions(report_params)
       redirect_to @report, notice: t('controllers.common.notice_update', name: Report.model_name.human)
     else
-      flash.now[:alert] = t('controllers.common.notice_update_failed', name: Report.model_name.human)
       render :edit, status: :unprocessable_entity
     end
   end

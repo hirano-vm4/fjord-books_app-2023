@@ -19,10 +19,10 @@ module ApplicationHelper
     safe_join(content.split("\n"), tag.br)
   end
 
-  def create_links(content)
+  def create_sanitize_links(content)
     uris = URI.extract(content, %w[http https])
     modified_text = content.dup
     uris.each { |uri| modified_text.sub!(uri, "<a href=\"#{uri}\">#{uri}</a>") }
-    modified_text
+    sanitize(modified_text, tags: %w[a], attributes: %w[href])
   end
 end
