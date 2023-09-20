@@ -323,7 +323,6 @@ DEPENDENCIES
   letter_opener_web
   puma (~> 5.0)
   rails (~> 7.0.4)
-  rails_autolink
   rubocop-fjord
   rubocop-rails
   selenium-webdriver

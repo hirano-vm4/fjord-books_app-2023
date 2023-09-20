@@ -21,17 +21,11 @@ class Report < ApplicationRecord
     created_at.to_date
   end
 
-  def save_report_and_mentions(params = nil)
+  def save_report_and_mentions
     success = false
 
     ActiveRecord::Base.transaction do
-      success =
-        if new_record?
-          save && save_mentions
-        else
-          update(params) && save_mentions
-        end
-
+      success = save && save_mentions
       raise ActiveRecord::Rollback unless success
     end
     success

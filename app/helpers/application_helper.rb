@@ -21,8 +21,8 @@ module ApplicationHelper
 
   def create_sanitize_links(content)
     uris = URI.extract(content, %w[http https])
-    modified_text = content.dup
-    uris.each { |uri| modified_text.sub!(uri, "<a href=\"#{uri}\">#{uri}</a>") }
+    modified_text = Marshal.load(Marshal.dump(content))
+    uris.each { |uri| modified_text = modified_text.sub(uri, "<a href=\"#{uri}\">#{uri}</a>") }
     sanitize(modified_text, tags: %w[a], attributes: %w[href])
   end
 end
