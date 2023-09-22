@@ -207,6 +207,7 @@ ja:
       notice_create: "%{name}が作成されました。"
       notice_update: "%{name}が更新されました。"
       notice_destroy: "%{name}が削除されました。"
+      notice_update_failed: "%{name}が更新されませんでした。入力を確認してもう一度更新してください。"
   layouts:
     menu:
       menu: メニュー
