@@ -22,11 +22,13 @@ class ReportsTest < ApplicationSystemTestCase
     visit reports_path
     click_link '日報の新規作成'
 
-    fill_in 'タイトル', with: @report.title
-    fill_in '内容', with: @report.content
+    fill_in 'タイトル', with: 'I mentioned Bob\'s report.'
+    fill_in '内容', with: 'http://localhost:3000/reports/2'
     click_button '登録する'
 
     assert_text '日報が作成されました。'
+    assert_text 'I mentioned Bob\'s report.'
+    assert_text 'http://localhost:3000/reports/2'
     click_on '日報の一覧に戻る'
   end
 
@@ -39,7 +41,8 @@ class ReportsTest < ApplicationSystemTestCase
     click_button '更新する'
 
     assert_text '日報が更新されました。'
-    click_on '日報の一覧に戻る'
+    assert_text '更新しました'
+    assert_text '更新完了！'
   end
 
   test 'should destroy Report' do
@@ -47,5 +50,8 @@ class ReportsTest < ApplicationSystemTestCase
     click_on 'この日報を削除'
 
     assert_text '日報が削除されました。'
+    assert_selector 'h1', text: '日報の一覧'
+    assert_no_text 'I mentioned Bob\'s report.'
+    assert_no_text 'http://localhost:3000/reports/2'
   end
 end
