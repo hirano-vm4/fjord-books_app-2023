@@ -16,7 +16,7 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test 'create_on' do
-    @report_by_alice.created_at = Time.parse('Sat, 23 Sep 2023 15:33:00.000000000 JST +09:00')
+    @report_by_alice.created_at = '2023-09-23 15:33'.in_time_zone
     assert_equal '2023/9/23'.to_date, @report_by_alice.created_on
   end
 end

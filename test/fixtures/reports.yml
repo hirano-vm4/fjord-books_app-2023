@@ -2,10 +2,10 @@
 
 report_by_alice:
   user: alice
-  title: I mentioned Bob's report.
-  content: http://localhost:3000/reports/2
+  title: Alice's greeting.
+  content: Good morning.
 
 report_by_bob:
   user: bob
   title: Bob's greeting.
-  content: Good afternoon.I read Alice's report.
+  content: Good afternoon.
